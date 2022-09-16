@@ -20,7 +20,8 @@ namespace ProductReview
             DataTable table = Management.ToDataTable<ProductReviewList>(productReviewList);
             //Management.PrintDataTable(table);
             //Management.RetrieveTrueRecords(table);
-            Management.AverageRating(table);
+            //Management.AverageRating(table);
+            Management.RetrieveRecordsWithNiceReview(table);
         }  
     }
 }
