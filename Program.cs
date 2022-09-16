@@ -9,9 +9,10 @@ namespace ProductReview
             Console.WriteLine("Welcome to product review management using LINQ!\n");
 
             List<ProductReviewList> productReviewList = Management.GetProductReviews();
-           // Management.Display(productReviewList);
+            // Management.Display(productReviewList);
             //Management.TopRecords(productReviewList);
-            Management.GetRecordsWithRatingAboveThree(productReviewList);
+            //Management.GetRecordsWithRatingAboveThree(productReviewList);
+            Management.CountOfReview(productReviewList);
         }  
     }
 }
