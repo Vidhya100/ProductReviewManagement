@@ -231,5 +231,27 @@ namespace ProductReview
                 Console.WriteLine();
             }
         }
+
+        public static void AverageRating(DataTable table)
+        {
+            var _records = table.AsEnumerable().GroupBy(a => a.Field<int>("ProductId")).Select(a => new { ProductId = a.Key, AvgRating = a.Average(r => r.Field<double>("Rating")) });
+            var records = from list in table.AsEnumerable()
+                          group list by list.Field<int>("ProductId") into grp
+                          select new
+                          {
+                              ProductId = grp.Key,
+                              AvgRating = grp.Average(a => a.Field<double>("Rating"))
+                          };
+            Console.WriteLine("\nProductId and Average Rating:");
+            Console.Write("{0,-20}", "ProductId");
+            Console.Write("{0,-20}", "Average Rating");
+            Console.WriteLine();
+            foreach (var pr in _records)
+            {
+                Console.Write("{0,-20}", pr.ProductId);
+                Console.Write("{0,-20}", pr.AvgRating);
+                Console.WriteLine();
+            }
+        }
     }
 }

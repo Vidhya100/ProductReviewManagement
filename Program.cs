@@ -19,7 +19,8 @@ namespace ProductReview
             //Management.SkipTop5Records(productReviewList);
             DataTable table = Management.ToDataTable<ProductReviewList>(productReviewList);
             //Management.PrintDataTable(table);
-            Management.RetrieveTrueRecords(table);
+            //Management.RetrieveTrueRecords(table);
+            Management.AverageRating(table);
         }  
     }
 }
