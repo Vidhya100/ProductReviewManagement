@@ -113,7 +113,7 @@ namespace ProductReview
         }
 
 
-        public static void GetProductIdAndReview(List<ProductReviewList> productReviewList)
+        public static void GetIdAndReview(List<ProductReviewList> productReviewList)
         {
             var records = from list in productReviewList
                           select new

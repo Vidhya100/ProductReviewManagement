@@ -12,7 +12,8 @@ namespace ProductReview
             // Management.Display(productReviewList);
             //Management.TopRecords(productReviewList);
             //Management.GetRecordsWithRatingAboveThree(productReviewList);
-            Management.CountOfReview(productReviewList);
+            // Management.CountOfReview(productReviewList);
+            Management.GetIdAndReview(productReviewList);
         }  
     }
 }
