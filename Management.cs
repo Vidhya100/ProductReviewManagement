@@ -66,5 +66,29 @@ namespace ProductReview
                 Console.WriteLine();
             }
         }
+
+        public static void GetRecordsWithRatingAboveThree(List<ProductReviewList> productReviewList)
+        {
+            var records = from list in productReviewList
+                          where list.Rating > 3 && (list.ProductId == 1 ||
+                                list.ProductId == 4 || list.ProductId == 9)
+                          select list;
+            Console.WriteLine("\nRecords with rating greater than 3 and productId in (1,4,9):");
+            Console.Write("{0,-20}", "ProductId");
+            Console.Write("{0,-20}", "UserId");
+            Console.Write("{0,-20}", "Rating");
+            Console.Write("{0,-20}", "Review");
+            Console.Write("{0,-20}", "IsLike");
+            Console.WriteLine();
+            foreach (var pr in records)
+            {
+                Console.Write("{0,-20}", pr.ProductId);
+                Console.Write("{0,-20}", pr.UserId);
+                Console.Write("{0,-20}", pr.Rating);
+                Console.Write("{0,-20}", pr.Review);
+                Console.Write("{0,-20}", pr.IsLike);
+                Console.WriteLine();
+            }
+        }
     }
 }
