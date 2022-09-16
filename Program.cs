@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+
 namespace ProductReview
 {
     class Program
@@ -13,8 +15,10 @@ namespace ProductReview
             //Management.TopRecords(productReviewList);
             //Management.GetRecordsWithRatingAboveThree(productReviewList);
             // Management.CountOfReview(productReviewList);
-           // Management.GetIdAndReview(productReviewList);
-           Management.SkipTop5Records(productReviewList);
+            // Management.GetIdAndReview(productReviewList);
+            //Management.SkipTop5Records(productReviewList);
+            DataTable table = Management.ToDataTable<ProductReviewList>(productReviewList);
+            Management.PrintDataTable(table);
         }  
     }
 }
