@@ -18,7 +18,8 @@ namespace ProductReview
             // Management.GetIdAndReview(productReviewList);
             //Management.SkipTop5Records(productReviewList);
             DataTable table = Management.ToDataTable<ProductReviewList>(productReviewList);
-            Management.PrintDataTable(table);
+            //Management.PrintDataTable(table);
+            Management.RetrieveTrueRecords(table);
         }  
     }
 }
