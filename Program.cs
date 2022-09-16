@@ -21,7 +21,8 @@ namespace ProductReview
             //Management.PrintDataTable(table);
             //Management.RetrieveTrueRecords(table);
             //Management.AverageRating(table);
-            Management.RetrieveRecordsWithNiceReview(table);
+            //Management.RetrieveRecordsWithNiceReview(table);
+            Management.RetrieveRecordsWithUserId10AndOrderedByRating(table);
         }  
     }
 }
