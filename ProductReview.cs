@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProductReview
 {
-    class ProductReview
+    class ProductReviewList
     {
         public int ProductId { get; set; }
         public int UserId { get; set; }
