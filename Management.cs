@@ -132,5 +132,27 @@ namespace ProductReview
                 Console.WriteLine();
             }
         }
+
+        public static void SkipTop5Records(List<ProductReviewList> productReviewList)
+        {
+            var records = (from list in productReviewList
+                           select list).Skip(5);
+            Console.WriteLine("\nSkip First 5 Records:");
+            Console.Write("{0,-20}", "ProductId");
+            Console.Write("{0,-20}", "UserId");
+            Console.Write("{0,-20}", "Rating");
+            Console.Write("{0,-20}", "Review");
+            Console.Write("{0,-20}", "IsLike");
+            Console.WriteLine();
+            foreach (var pr in records)
+            {
+                Console.Write("{0,-20}", pr.ProductId);
+                Console.Write("{0,-20}", pr.UserId);
+                Console.Write("{0,-20}", pr.Rating);
+                Console.Write("{0,-20}", pr.Review);
+                Console.Write("{0,-20}", pr.IsLike);
+                Console.WriteLine();
+            }
+        }
     }
 }
